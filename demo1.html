@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+			box-sizing:border-box;
+		}
+		img{
+			max-width:100%； //响应式
+		}
+	</style>
+</head>
+<body>
+	<img id=“xxx” width="400" src="/Users/wzzlok/Desktop/haha.png" alt="something"/>
+	<script>
+		xxx.onload=function(){
+			console.log("图片加载成功")；
+		}；
+		xxx.onerror=function(){
+			console.log("图片加载失败")；
+			xxx.src="/404.png";  //失败后加载的图
+		}；
+	</script>
+</body>
+</html>
